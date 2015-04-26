@@ -1,0 +1,429 @@
+html {
+    font-size: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', Helvetica, sans-serif;
+    z-index: 100;
+}
+section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h1 {
+    font-family: 'Abril Fatface', Garamond;
+    font-size: 5rem;
+    margin: 0 auto;
+}
+h2 {
+    font-family: 'Abril Fatface', Garamond;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0 auto;
+}
+p {
+    line-height: 2.2rem;
+    font-size: 1.5rem;
+}
+nav {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+ul {
+    padding: 0;
+    margin: 0 auto;
+}
+li {
+    display:inline;
+    border: solid white 1px;
+    border-radius: 10px;
+    color: white;
+    margin: 20px;
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+footer {
+    background: rgba(244, 222, 106, 1);
+    padding: 10px 0 20px 0;
+}
+#menu {
+    position: fixed;
+    top: 10px;
+    left: 1%;
+    margin: 0 auto;
+    border: solid white 1px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 10px;
+    color: white;
+    line-height: 1rem;
+    z-index: 500;
+    text-decoration: none;
+}
+#soundtoggle {
+   position: fixed;
+   top: 10px;
+   right: 1%;
+   opacity: 0;
+}
+#soundtogglelabel {
+    position: fixed;
+    top: 10px;
+    right: 1%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: .7;
+}
+#twitter {
+   position: fixed;
+   top: 60px;
+   right: 1%;
+   opacity: 0;
+}
+#twitterlabel {
+    position: fixed;
+    top: 65px;
+    right: 1%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index:1000;
+    opacity:.7;
+}
+#twitterfeed {
+    position: fixed;
+    right: 1%;
+    top: 120;
+    display: none;
+    z-index: 1000;
+}
+#backing {
+    margin:0 auto;
+    padding: 0;
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background:url('Image0.jpg') center bottom;
+    background-size: cover;
+    z-index: 900;
+}
+/* IMAGE SIZE MUST BE ~1920x1271px or else animation will be distorted */
+#backing {
+    -webkit-animation: masthead_background 48s cubic-bezier(.1,1,.8,1) 8s infinite;
+    -webkit-animation-play-state:running;
+    animation: masthead_background 48s cubic-bezier(.1,1,.8,1) 8s infinite;
+    animation-play-state:running;
+}
+/* for additional images, remember to change percents*/
+@-webkit-keyframes masthead_background
+    {
+    0%  {background:url('Image0.jpg')center bottom;background-size: cover;}
+    20% {background:url('Image1.jpg')center bottom;background-size: cover;}
+    40% {background:url('Image2.jpg')center bottom;background-size: cover;}
+    60% {background:url('Image3.jpg')center bottom;background-size: cover;}
+    80% {background:url('Image4.jpg')center bottom;background-size: cover;}
+    100%   {background:url('Image0.jpg')center bottom; background-size: cover;}
+}
+@keyframes masthead_background
+    {
+    0%  {background:url('Image0.jpg')center bottom;background-size: cover;}
+    20% {background:url('Image1.jpg')center bottom;background-size: cover;}
+    40% {background:url('Image2.jpg')center bottom;background-size: cover;}
+    60% {background:url('Image3.jpg')center bottom;background-size: cover;}
+    80% {background:url('Image4.jpg')center bottom;background-size: cover;}
+    100%   {background:url('Image0.jpg')center bottom; background-size: cover;}
+}
+/*remove once firefox supports background image animations and remove JS tail()*/
+@-moz-document url-prefix(){
+    #backing {
+        background:url('Image0.jpg') center bottom;
+    }
+}
+#masthead {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-top: 0;
+}
+#header {
+    position: relative;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: rgba(119, 178, 217, 0.6);
+    box-shadow: 0 2px 3px black;
+    padding: 10px;
+}
+#header h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: rgba(5, 5, 100, 1);
+    margin-top: -.5%;
+}
+.four_col {
+    display: inline-block;
+    border: solid white 1px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 1.7rem;
+    font-weight: 300;
+    width: 20%;
+    position: relative;
+    vertical-align: top;
+}
+#s p {
+    font-size: 1.2rem;
+    color: black;
+    display:none;
+}
+#s p a {
+    color: black;
+}
+#s:focus {
+    background: rgba(244, 222, 106, 1);
+    color: black;
+    padding-bottom: 0;
+}
+#s:hover {
+    background: rgba(244, 222, 106, 1);
+    color: black;
+    padding-bottom: 0;
+}
+#s:focus p {
+    display: block;
+    line-height: 1.2rem;
+}
+#s:hover p {
+    display: block;
+    line-height: 1.2rem;
+}
+#c p {
+    font-size: 1rem;
+    display:none;
+}
+#c:focus {
+    background: rgba(244, 222, 106, 1);
+    color: black;
+    padding-bottom: 0;
+}
+#c:hover {
+    background: rgba(244, 222, 106, 1);
+    color: black;
+    padding-bottom: 0;
+}
+#c:focus p {
+    display: block;
+    line-height: .8rem;
+}
+#c:hover p {
+    display: block;
+    line-height: .8rem;
+}
+#mailform {
+    display: none;
+    position: absolute;
+    right: 1%;
+    top: -50%;
+}
+#scholarship {
+    background: rgba(119, 178, 217, 1);
+    font-size: 1.5rem;
+}
+.schol_images {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 80%;
+}
+.SI {
+    background-color: black;
+    background-size: cover;
+    background-position: center center;
+    width: 300px;
+    height: 225px;
+    border-radius: 10px;
+    margin: 5px;
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 0;
+}
+.SI:first-child {
+     background-image: url('CristinaBernardoSouthAfrica1.jpg');
+}
+.SI:nth-child(2) {
+     background-image: url('SouthAfricaChildren.jpg');
+}
+.SI:nth-child(3) {
+     background-image: url('CristinaBernardoSouthAfrica2.jpg');
+}
+.SI:nth-child(4) {
+     background-image: url('ErikaKullbergGuatemala2.jpg');
+}
+.SI:nth-child(5) {
+     background-image: url('ErikaKullbergGuatemala1.jpg');
+}
+.SI:nth-child(6) {
+     background-image: url('ErikaKullbergGuatemala3.jpg');
+}
+.overlay {
+    background: rgba(255,255,255,.5);
+    color: black;
+    visibility: hidden;
+    height: 100%;
+    border-radius: 10px;
+    font-weight:900;
+}
+.overlay p{
+    color: black;
+    opacity: 1;
+    -webkit-transform: translateY(225%);
+    -moz-transform: translateY(225%);
+    -transform: translateY(225%);
+    margin: 0 auto;
+}
+.SI:hover .overlay {
+    visibility: visible;
+}
+.scholarship_text {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+#scholarship ul {
+    width: 100%;
+    margin: 0 auto;
+}
+#scholarship li {
+    display: inline-block;
+    width: 25%;
+    color: rgba(50,50,50,1);
+    background: rgba(244, 222, 106, 1);
+    border: rgba(244, 222, 106, 1);
+}
+#scholarship li a {
+    text-decoration: none;
+    color: rgba(50,50,50,1);
+}
+#emzingo {
+    background: url('application_background.jpg');
+    background-size: cover;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+#emzingo_box {
+    width: 90%;
+    background: rgba(244, 222, 106, .6);
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px black;
+}
+#emzingo p {
+    margin-left: 10%;
+    margin-right:10%;
+}
+#interested {
+    font-size: 2rem;
+    margin: 0 auto;
+    line-height: 3rem;
+}
+#emzingo_apply {
+    width: 25%;
+    margin: 0 auto;
+    border: solid rgba(119, 178, 217, 1) 1px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 5px;
+    color: rgba(50,50,50,1);
+    background: rgba(119, 178, 217, 1);
+}
+#emzingo_apply a {
+    text-decoration: none;
+    color: rgba(50,50,50,1);
+}
+#about {
+    min-height: 100%;
+    background: url('foundationbackground.JPG');
+    background-size: cover;
+    border-bottom: solid rgba(119, 178, 217, 1) 5px;
+    padding-top: 0;
+}
+#about h2 {
+    width: 100%;
+    background-color: rgba(244, 222, 106, 1);
+    background: rgba(244, 222, 106, 1);
+    margin: 0 auto;
+    font-size: 2.5rem;
+    background-color: rgba(244, 222, 106, 1);
+}
+.about_content {
+    width: 35%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1rem;
+}
+#kullbergs {
+    border: solid rgba(244, 222, 106, 1) 2px;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 959px) {
+    .four_col {
+        font-size: 1.3rem;
+    }
+}
+@media (max-device-width: 640px) {
+    .four_col {
+        width: 40%;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    #about {
+        min-height: 0;
+        height: auto;
+    }
+}
+@media (orientation:portrait) {
+    #about {
+        min-height: 0;
+        height: auto;
+    }
+}
+@media only screen and (max-device-width: 480px) {
+    #header {
+        top: 10%;
+    }
+}

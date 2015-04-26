@@ -1,0 +1,114 @@
+<DOCTYPE! HTML>
+<head>
+    <meta title="Kullberg Foundation - Change A Life">
+    <meta name="description" content="Promoting Opportunities to Change a Life">
+    <meta name="keywords" content="kullberg foundation, hans kullberg, change a life, kullberg, kulberg foundation, kulberg, hans kulberg, social impact, charity, nonprofit, non-profit, philanthropy, emzingo, emzingo education, education impact, change lives, socimp, kullbergfdn, fdn, fndn, new york, kullberg family, family, kullbergs, emzingo fellow, scholarship, socent, social enterprise, development, international, development, new york, manhattan, new york city">
+    <meta name="author" content="Hans Kullberg, Teresita Kullberg, Lennart Kullberg">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body onload="setInterval(tail, 5000)">
+    <div id='container'>
+    <a id='menu' href='#top'><div>MENU</div></a>
+    <div>
+        <label for="soundtoggle" id="soundtogglelabel"><img src='music_icon.png'></label>
+        <input type="checkbox" name="soundtoggle" id="soundtoggle" onchange='PlayPause(this);'>
+        <audio id='song' src='somewhereovertherainbow_whatawonderfulworld.mp3' type='audio/mp3'    autoplay loop>
+    </div>
+    <div>
+        <label for="twitter" id="twitterlabel"><img src='twitter_icon.png'></label>
+        <input type="checkbox" name="twitter" id="twitter" onchange='ShowTweets(this);'>
+        <div id="twitterfeed">
+        <a class="twitter-timeline" href="https://twitter.com/KullbergFDN" width="300" height="500" data-widget-id="444674629861265408">Tweets by @KullbergFDN</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div id='backing'>
+        <section id='masthead' >
+            <div id='header'>
+                <h1>The Kullberg Foundation</h1>
+                <h2>Promoting Opportunities to Change a Life</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class='four_col' id='s'><a href='#scholarship'>SCHOLARSHIP<p></a><a href='#scholarship'>INFO</a><br><a href="application.html">APPLICATIONS</a><br><a href='#emzingo'>EMZINGO</a></p></li>
+                    <li class='four_col'><a href='#about'>FOUNDATION</a></li>
+                    <li class='four_col'><a href='http://www.news.kullbergfoundation.tumblr.com'>NEWS</a></li>
+                    <li class='four_col' id='c'>CONTACT<p>(hans)@kullbergfoundation.org<br><br>Twitter: at KullbergFDN</p></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+        <section id='scholarship' href='#scholarship'>
+            <br><h2>THE KULLBERG SCHOLARSHIP</h2>
+                <div class='scholarship_text'><p>The Kullberg Scholarship seeks to award talented and ambitious Emzingo Fellows who are motivated to change the world in some way, shape, or form.</p></div>
+                <div class='schol_images'>
+                    <div class='SI'><div class='overlay'><p>Cristina in South Africa</p></div></div>
+                    <div class='SI'><div class='overlay'><p>Children in South Africa</p></div></div>
+                    <div class='SI'><div class='overlay'><p>Cristina in South Africa</p></div></div>
+                    <div class='SI'><div class='overlay'><p>Erika in Guatemala</p></div></div>
+                    <div class='SI'><div class='overlay'><p>Erika in Guatemala</p></div></div>
+                    <div class='SI'><div class='overlay'><p>Erika in Guatemala</p></div></div>
+                </div>
+                <div class='scholarship_text'>
+                      <p>The Kullberg Foundation encourages Fellows to pursue their dreams and goals of fighting for a social cause, whether that is in the immediate future or part of their long-term plans. The Kullberg Scholarship believes that personal dreams and ambitions are shaped and influenced by previous experiences and people, providing a foundation on which to launch a successful future.</p>
+                </div>
+                <ul>
+                    <li><a href="application.html">Apply Now!</a></li>
+                    <li><a href='#emzingo'>Who is Emzingo?</a></li>
+                </ul>
+        </section><!--
+        <section id='winners'>
+            <br><h2>2014 SCHOLARSHIP WINNER</h2>
+        </section>
+    --><section id='about' href='#about'>
+            <h2>ABOUT THE KULLBERG FOUNDATION</h2>
+            <div class='about_content'><p>The Kullberg Scholarship is named after Teresita and Lennart Kullberg, who through education and ambition, have utilized their unique skillset to persevere in the path of changing the world, one life at a time.</p></div>
+            <div class='about_content'><img id='kullbergs' src='kullbergs.png'></div>
+        </section>
+        <section id='emzingo' href='#emzingo'>
+            <div id='emzingo_box'><h2>PARTNERING WITH EMZINGO</h2>
+            <p>Building communities and making a social impact are at the core of the Kullberg Foundation&#39;s principles. Emzingo's award-winning NexGen Fellowship is an excellent way to promote these principles. Through the Emzingo Fellowship, the Scholars are able to obtain hands-on experience in a developing country using their unique skillset to have a real impact on the community. Read more about <a href='http://www.emzingo.com'>Emzingo</a>.</p>
+            <iframe width="640" height="360" src="//www.youtube.com/embed/vqLcQU9wXKs" frameborder="0" allowfullscreen></iframe>
+            <br><div id='interested'>Interested?<div id='emzingo_apply'><a href="application.html">Apply Now!</a></div></div>
+        </div>
+        </section>
+        <footer>
+            Kullberg Foundation<br>
+            166 Elizabeth St Apt 5C<br>
+            New York, NY 10012<br>
+            (hans)@kullbergfoundation.org
+        </footer>
+    </div>
+    <script>
+        function PlayPause(cb) {
+            if(cb.checked === true){
+               document.getElementById('song').pause();
+            } else{
+               document.getElementById('song').play();
+            }
+        }
+        function ShowTweets(cb) {
+            if(cb.checked === true){
+                document.getElementById('twitterfeed').style.display="initial";
+            } else {
+                document.getElementById('twitterfeed').style.display="none";
+            }
+        }
+
+        if (navigator.userAgent.search("Firefox") >= 0) {
+            var images = ['url(Image0.jpg)','url(Image1.jpg)','url(Image2.jpg)'];
+
+            var count=0;
+            function tail() {
+                document.getElementById('backing').style.backgroundImage = images[count++%images.length];
+                document.getElementById('backing').style.backgroundSize = 'cover';
+            }
+        }
+
+        function iFramePopUp(id) {
+            document.getElementById(id).style.display='block';
+        }
+
+    </script>
+</body>

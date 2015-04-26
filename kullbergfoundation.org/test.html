@@ -1,0 +1,36 @@
+<DOCTYPE! HTML>
+<head>
+    <link rel="stylesheet" type="text/css" href="application.css">
+</head>
+<body onload="setInterval(tail, 5000)">
+    <a id='menu' href='index.html'><div>MENU</div></a>
+    <div>
+        <label for="soundtoggle" id="soundtogglelabel"><img src='music_icon.png'></label>
+        <input type="checkbox" name="soundtoggle" id="soundtoggle" onchange='PlayPause(this);'>
+        <audio id='song' src='somewhereovertherainbow_whatawonderfulworld.mp3' type='audio/mp3' autoplay loop>
+    </div>
+    <div>
+        <label for="twitter" id="twitterlabel"><img src='twitter_icon.png'></label>
+        <input type="checkbox" name="twitter" id="twitter" onchange='ShowTweets(this);'>
+        <div id="twitterfeed">
+        <a class="twitter-timeline" href="https://twitter.com/KullbergFDN" width="300" height="500" data-widget-id="444674629861265408">Tweets by @KullbergFDN</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/1QkW9srG4bM9Msljt116NdRTbCqAmNo9jgz0Fgvr-UI0/viewform?embedded=true" width="300" height="250" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <script>
+        function PlayPause(cb) {
+            if(cb.checked === true){
+               document.getElementById('song').pause();
+            } else{
+               document.getElementById('song').play();;
+            }
+        }
+        function ShowTweets(cb) {
+            if(cb.checked === true){
+                document.getElementById('twitterfeed').style.display="initial";
+            } else {
+                document.getElementById('twitterfeed').style.display="none"
+            }
+        }
+        </script>
+</body>
